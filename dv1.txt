@@ -1,0 +1,83 @@
+1.
+	-ras only:
+		cas signal bleibt aus = dadurch keine weitergabe an i/o
+		zaehler laeuft durch reihe durch und fuehrt einen lese vorgang aus
+		externe ansteuerung notwendig um entsprechnede zeile auszuwaehlen
+	-cas before ras:
+		internener adresszaehler wird durch ansteuerung aktiviert und laeuft durch alle zellen
+	-hidden refresh:
+		bei einem lese vorgang wird zusaetzlich ein refresh angehaengt indem ras abgeschaltet wird
+
+2.
+	-dram:
+		dynamisches ram, zyklisches auffrischen
+	-sdram:
+		synchronous dram, taktgeber zur synchronisierten e/a
+	-ddr ram:
+		double data rate, taktimpuls steigende und fallende flanke, doppelte geschwindigkeit
+
+3.
+	-eingangswerte werden mit referenzgroessen verglichen.
+	-entweder parallel, mit mehreren referenz spannungen
+	-oder seriell, durch teilung und aufsummierung der kleinsten teilspannung bis eingangspannung erreicht wird
+4.
+	-prom:
+		programmable rom, permanente speicherung von 0 oder 1 durch trennung oder herstellung einer vebindung
+	-eprom:
+		erasable prom, programmierung durch FET (Field Effect Transistor), speichert die werte ueber lange zeit, loeschen durch uv licht.
+
+5.
+	a:
+		-ROM: EPROM,EEPROM
+		-RAM: SRAM,DRAM
+	b:
+		-ROM: dauerhafte speicherung, nur lese zugriff, bleibt nach spannungsabfall erhalten
+		-RAM: fluechtiger speicher, schneller schreib- lesezugriff, geht nach spannungsabfall verloren
+	c:
+		-ROM: BIOS
+		-RAM: Hauptspeicher, Cache
+	d:
+		-speichergroesse: MB/GB
+		-access time: zeit von anlegen einer adresse bis daten bereitgestellt sind
+		-dataflow: lese geschwindigkeit in Byte/s
+
+6.
+	control unit:
+	-execution unit:
+		ausfuehrung der befehle
+	-instruction decode unit:
+		umwandlen der befehle in machinen code
+	-bus interface logic
+		steuerung und ueberwachung des bus systems
+	-control uni:
+		steuerung der einzelnen einheiten, ablauf steuerung der befehlsabarbeitung
+
+	processing unit:
+	-alu:
+		arithmetische und logische berechnungen
+	-fpu:
+		gleitkomme berechnungen
+
+	cache unit:
+	-data cache:
+		sehr schneller zwischenspeicher fuer daten
+	-code cache:
+		sehr schneller zwischenspeicher fuer instruktionen
+7.
+	-wort organisiert: bitgroesse > 1
+	-bit organisiert
+
+8.
+		+---+
+		|1  |----+--+--+--+
+	A0--+aus|----+--+--+--+
+	A1--+4  |----+--+--+--+
+		|   |----+--+--+--+
+		+---+	 |  |  |  |
+				 |  |  |  |
+				 |  |  |  |
+				 +--+--+--+
+				 |1 aus 4 |
+				 +--+--+--+
+				    |  |
+					A2 A3
